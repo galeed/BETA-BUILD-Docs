@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Permite ejecutar el flujo manualmente
+  workflow_dispatch:
 
 jobs:
   build-android:
@@ -28,9 +28,11 @@ jobs:
       - name: Instalar dependencias de Node
         run: npm install
 
-      - name: Inicializar Capacitor
+      - name: Preparar directorio web e Inicializar Capacitor
         run: |
-          npx cap init "Mi App" "com.miempresa.app" --web-dir "."
+          mkdir -p www
+          cp -r $(ls -A | grep -vE '^\.git|node_modules|www|android') www/
+          npx cap init "Mi App" "com.miempresa.app" --web-dir "www"
 
       - name: Agregar plataforma Android
         run: |
