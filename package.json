@@ -1,0 +1,14 @@
+{
+  "name": "mi-app-android",
+  "version": "1.0.0",
+  "description": "App Web convertida a APK nativo",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'No se requiere paso de compilación web'"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.0.0",
+    "@capacitor/core": "^6.0.0",
+    "@capacitor/android": "^6.0.0"
+  }
+}
