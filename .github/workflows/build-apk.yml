@@ -46,7 +46,7 @@ jobs:
         run: |
           mkdir -p dist
           cp index.html manifest.json dist/ 2>/dev/null || cp index.html dist/
-          npx cap init "Meow Build App" "com.meowbuild.app" --web-dir dist
+          npx cap init "Meow Docs App" "com.meowdocs.app" --web-dir dist
           npx cap add android
           npx cap copy android
           npx cap sync android
