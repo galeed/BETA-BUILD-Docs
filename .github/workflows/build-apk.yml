@@ -41,13 +41,16 @@ jobs:
           npm init -y
           npm install @capacitor/core @capacitor/cli @capacitor/android
 
-            # 6. Inicializar y sincronizar Capacitor
+                  # 6. Inicializar y sincronizar Capacitor
       - name: Inicializar Capacitor y Agregar Plataforma Android
         run: |
-          npx cap init "Meow Build App" "com.meowbuild.app" --web-dir .
+          mkdir -p dist
+          cp index.html manifest.json dist/ 2>/dev/null || cp index.html dist/
+          npx cap init "Meow Build App" "com.meowbuild.app" --web-dir dist
           npx cap add android
           npx cap copy android
           npx cap sync android
+
 
 
       # 7. Corregir duplicidad de clases Kotlin
