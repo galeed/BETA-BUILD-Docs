@@ -1,7 +1,7 @@
 {
-  "name": "Meow Buil App",
+  "name": "Meow Docs App",
   "short_name": "MeowApp",
-  "description": "PWA, APK & iOS Offline Studio",
+  "description": "Docs",
   "start_url": "index.html",
   "display": "standalone",
   "orientation": "portrait",
