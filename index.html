@@ -831,6 +831,11 @@
   </div>
 
   <script>
+  
+  if ('serviceWorker' in navigator) {
+            Y navigator.serviceWorker.register('sw.js');
+        }
+  
     // --- ESTADO GLOBAL ---
     let currentDocId = 'doc_' + Date.now();
     let audioCtx = null;
